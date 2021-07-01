@@ -63,8 +63,7 @@ public class TopicosController {
 
 	@PutMapping("/{id}")
 	@Transactional
-	public ResponseEntity<TopicoDto> atualizar(@PathVariable Long id,
-											   @RequestBody @Valid AtualizacaoTopicoForm form) {
+	public ResponseEntity<TopicoDto> atualizar(@PathVariable Long id, @RequestBody @Valid AtualizacaoTopicoForm form) {
 		Optional<Topico> optional = topicoRepository.findById(id);
 
 		if(optional.isPresent()) {
