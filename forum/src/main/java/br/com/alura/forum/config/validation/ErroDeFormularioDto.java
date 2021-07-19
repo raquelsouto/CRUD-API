@@ -1,4 +1,4 @@
-package br.com.alura.forum.exception.validation;
+package br.com.alura.forum.config.validation;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
