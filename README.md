@@ -8,5 +8,5 @@ versão 1.0:
 
 versão 2.0: Segurança da API, cache e monitoramento  
 - Paginação e Ordenação;  
-- Adicionar módulo de cache;  
+- Implementar o módulo cache ao projeto;  
 
