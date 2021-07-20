@@ -12,8 +12,9 @@ versão 2.0: Segurança da API, cache e monitoramento
 - Spring Security   
 - Configurando autenticação Stateless  
 - Token e Autenticação via JWT  
-- Monitoramento com Spring Boot Actuator  
-- Spring Boot Admin Server  
+- Detalhamento com Spring Boot Actuator  
+- Monitoramento Spring Boot Admin Server  
+- Documentação da API com Swagger  
 
 
 
