@@ -1,4 +1,4 @@
-# CRUD-API
+# API-Forum
 Repositório com a criação de um CRUD de uma API REST utilizando o spring boot.  
 
 versão 1.0:
@@ -10,4 +10,10 @@ versão 2.0: Segurança da API, cache e monitoramento
 - Paginação e Ordenação  
 - Implementação Cache ao Projeto    
 - Spring Security   
+- Configurando autenticação Stateless  
+- Token e Autenticação via JWT  
+- Monitoramento com Spring Boot Actuator  
+- Spring Boot Admin Server  
+
+
 
