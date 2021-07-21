@@ -20,7 +20,6 @@ versão 3.0
 - Atualizar projeto e adicionar mais segurança  
 - Profiles  
 - Testes automatizados  
-- Deploy   
-- Deploy com Docker e na nuvem   
+- Deploy, Deploy com Docker e na nuvem     
 
 
