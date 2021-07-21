@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ff1d8f0-7c64-4751-89b9-ac661a84c2a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/forum/src/main/java/br/com/alura/forum/controller/TopicosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/java/br/com/alura/forum/controller/TopicosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/forum/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
