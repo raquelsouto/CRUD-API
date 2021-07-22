@@ -1,5 +1,5 @@
 # API-Forum
-Repositório com a criação de um CRUD de uma API REST utilizando o spring boot.  
+Repositório com a criação de um CRUD de uma API REST utilizando o spring boot. A cada versão do projeto, são incorporadas algumas atualizações.
 
 versão 1.0
 - Salvar, atualizar, deletar e listar cadastros  
