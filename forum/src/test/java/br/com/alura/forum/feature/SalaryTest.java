@@ -9,9 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.junit.Assert.assertEquals;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -30,7 +30,8 @@ public class SalaryTest {
 
         System.setProperty("professor.feature", "false");
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/incrementaSalario").param("id", prof.getId() + "" )).andExpect(status().is(200));
+        mockMvc.perform(MockMvcRequestBuilders.post("/incrementaSalario").param("id", prof.getId() + "" ))
+                .andExpect(MockMvcResultMatchers.status().is(200));
 
         prof = salarioRepository.findById(1).orElse(null);
 
