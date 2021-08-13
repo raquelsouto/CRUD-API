@@ -25,7 +25,7 @@ public class SalaryTest {
 
     @Test
     public void featurePropertyFalse_whenIncreaseSalary_thenNoIncrease() throws Exception {
-        Professor prof = new Professor("Cristiano", 1, 3500.50);
+        Professor prof = new Professor("Cristiano", 1, 2000.0);
         salarioRepository.save(prof);
 
         System.setProperty("professor.feature", "false");
@@ -34,7 +34,7 @@ public class SalaryTest {
 
         prof = salarioRepository.findById(1).orElse(null);
 
-        assertEquals("salary incorrect", java.util.Optional.of(2200), prof.getSalario());
+        assertEquals("salary incorrect", 2200, prof.getSalario(), 0.5);
 
     }
 }
