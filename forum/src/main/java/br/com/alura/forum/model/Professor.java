@@ -14,6 +14,7 @@ import javax.persistence.Id;
 public class Professor {
 
     private String nome;
+
     @Id
     private Integer id;
 

@@ -2,18 +2,24 @@ package br.com.alura.forum.feature;
 
 import br.com.alura.forum.model.Professor;
 import br.com.alura.forum.repository.SalarioRepository;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import static org.junit.Assert.assertEquals;
+import java.net.URI;
 
 @SpringBootTest
+@AutoConfigureMockMvc
 @RunWith(SpringRunner.class)
 public class SalaryTest {
 
@@ -30,12 +36,14 @@ public class SalaryTest {
 
         System.setProperty("professor.feature", "false");
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/incrementaSalario").param("id", prof.getId() + "" ))
-                .andExpect(MockMvcResultMatchers.status().is(200));
+        URI uri = new URI("/incrementaSalario");
 
-        prof = salarioRepository.findById(1).orElse(null);
+        mockMvc.perform(MockMvcRequestBuilders.post(uri).param("id", prof.getId() + "" ))
+                .andExpect(MockMvcResultMatchers.status().is(403));
 
-        assertEquals("salary incorrect", 2200, prof.getSalario(), 0.5);
+        prof = salarioRepository.findById(1) .orElse(null);
+
+        Assert.assertEquals("salary incorrect", 2000.0, prof.getSalario(), 0.5);
 
     }
 }

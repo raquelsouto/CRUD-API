@@ -1,7 +1,6 @@
 package br.com.alura.forum.repository;
 
 import br.com.alura.forum.model.Curso;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

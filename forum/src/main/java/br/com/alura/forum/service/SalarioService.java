@@ -11,12 +11,12 @@ import org.springframework.stereotype.Service;
 public class SalarioService {
 
     @Autowired
-    SalarioRepository professorRepositorye;
+    SalarioRepository professorRepository;
 
     @FeatureAssociation(value = FeatureToggle.PROFESSOR_MANAGEMENT_FEATURE)
     public void incrementaSalario(Integer id) {
-        Professor professor = professorRepositorye.findById(id).orElse(null);
-        professor.setSalario(professor.getSalario() * 0.15);
-        professorRepositorye.save(professor);
+        Professor professor = professorRepository.findById(id).orElse(null);
+        professor.setSalario(professor.getSalario() + professor.getSalario() * 0.1);
+        professorRepository.save(professor);
     }
 }
